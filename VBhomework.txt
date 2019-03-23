@@ -1,0 +1,55 @@
+Sub ticker()
+Dim i, J As Integer
+Dim firstvalue, lastvalue, minvalue, maxvalue As Double
+Dim total As Double
+total = 0
+J = 2
+Dim ws As Worksheet
+
+For Each ws In Worksheets
+
+ firstvalue = ws.Range("c2").Value
+ 
+ For i = 2 To Cells(Rows.Count, "A").End(xlUp).Row
+  
+ If ws.Range("A" & i).Value = ws.Range("A" & i + 1).Value Then
+ 
+     total = total + ws.Range("G" & i).Value
+     
+  Else
+     lastvalue = ws.Range("F" & i).Value
+     ws.Range("K" & J).Value = lastvalue - firstvalue
+     ws.Range("L" & J) = (ws.Range("k" & J).Value / firstvalue)
+     total = total + ws.Range("G" & i).Value
+     ws.Range("I" & J).Value = ws.Range("A" & i).Value
+     ws.Range("J" & J).Value = total
+     If ws.Range("K" & J).Value < 0 Then
+      ws.Range("K" & J).Interior.Color = vbRed
+     Else
+       ws.Range("K" & J).Interior.Color = vbGreen
+     End If
+     firstvalue = Range("C" & i + 1).Value
+     total = 0
+     J = J + 1
+     
+  End If
+  
+Next i
+J = 2
+
+
+'maxvalue = Range("L2").Value
+
+'For i = 2 To Cells(Rows.Count, "L").End(xlUp).Row
+
+'If (ws.Range("L" & i).Value < ws.Range("L" & i + 1).Value) Then
+
+'maxvalue = ws.Range("L" & i + 1).Value
+
+'End If
+'Next i
+
+'ws.Range("o2").Value = maxvalue
+total = 0
+Next
+End Sub
