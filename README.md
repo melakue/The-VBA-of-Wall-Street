@@ -20,3 +20,14 @@ VBA of Wall Street is about utilizing VBA scripting and analyze three years real
 * The solution will include everything from the moderate challenge.
 * The solution will also be able to locate the stock with the "Greatest % increase", "Greatest % Decrease" and "Greatest total volume".
 * Make the appropriate adjustments to the script that will allow it to run on every worksheet just by running it once.
+
+# 2014 Stock Market Analysis Screenshot:
+![Image description](https://github.com/melakue/The-VBA-of-Wall-Street/blob/master/VBA%20scripting%20Data%202014.JPG)
+
+# 2015 Stock Market Analysis Screeshot:
+![Image description](https://github.com/melakue/The-VBA-of-Wall-Street/blob/master/VBA%20Scripting%202015%20Data.JPG)
+# 2016 Stock Market Analysis Screeshot:
+![Image description](https://github.com/melakue/The-VBA-of-Wall-Street/blob/master/VBA%20Scripting%202016%20Data.JPG)
+
+
+
